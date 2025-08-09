@@ -688,12 +688,21 @@ body {
   color: #fff;
 }
 .underline-line {
-  width: 1300px;          /* length of the line */
-  height: 2px;           /* thickness */
-  background-color: #d3d9de; /* color of the underline */
-  margin: 10px 0;        /* vertical spacing */
+  width: 100%;
+  max-width: 1300px;
+  height: 2px;
+  background-color: #d3d9de;
+  margin: 10px auto; /* centers horizontally */
+  /* Optional: box-sizing to include padding in width */
+  box-sizing: border-box;
 }
 
+@media (max-width: 600px) {
+  .underline-line {
+    max-width: 100%;
+    margin: 10px 10px; /* padding from sides */
+  }
+}
 .nav-search-wrapper {
   display: flex;
   align-items: center;
@@ -872,4 +881,5 @@ body {
     font-size: 13px;
   }
 }
+
 
